@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="ru.inncreator.devhack.fragments.events.EventsFragmentsViewModel" />
+    </data>
+
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cradview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="688dp"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        android:foreground="@drawable/gradient"
+                        android:background="@color/cardview_dark_background"
+                        android:src="@drawable/example_pic"/>
+
+                    <TextView
+                        android:id="@+id/event_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginTop="328dp"
+                        android:layout_marginStart="16dp"
+                        android:textColor="#FFFFFF"
+                        android:elevation="2dp"
+                        tools:text="ТУРНИР"/>
+
+                    <TextView
+                        android:id="@+id/event_name"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="60sp"
+                        android:elevation="2dp"
+                        android:textColor="#FFFFFF"
+                        android:singleLine="false"
+                        android:maxLines="2"
+                        android:layout_alignStart="@id/event_type"
+                        android:layout_below="@id/event_type"
+                        tools:text="Горный\nспорт"/>
+
+                    <TextView
+                        android:id="@+id/event_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26sp"
+                        android:elevation="2dp"
+                        android:textColor="#FFFFFF"
+                        android:layout_alignStart="@id/event_type"
+                        android:layout_below="@id/event_name"
+                        tools:text="c 14 по 26 июня"/>
+
+                    <TextView
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:elevation="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Подробнее ^"
+                        tools:text="Подробнее ^"/>
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/event_type_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_below="@id/cradview"
+                android:layout_marginTop="34dp"
+                android:layout_marginStart="16dp"
+                tools:text="ТУРИНР"
+                android:textColor="#141B1F"/>
+
+            <TextView
+                android:id="@+id/ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cradview"
+                android:layout_marginTop="34dp"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/event_type_two"
+                tools:text="+20 баллов за участие"
+                android:textColor="#141B1F"/>
+
+            <TextView
+                android:id="@+id/event_name_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_below="@id/event_type_two"
+                android:textSize="30sp"
+                android:layout_marginTop="18dp"
+                android:text="@string/some_id"
+                android:textAppearance="@style/some_id"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/event_name_two"
+                android:layout_marginTop="18dp"
+                android:background="#1111">
+
+                <ImageView
+                    android:id="@+id/calendar_cl"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_calendar_clear_sharp"
+                    android:alpha="0.2" />
+
+                <TextView
+                    android:id="@+id/const_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/calendar_cl"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/data_const"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/event_date_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/calendar_cl"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginStart="52dp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/location_ic"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_location_sharp"
+                    android:alpha="0.2" />
+
+                <TextView
+                    android:id="@+id/const_loc"
+                    android:text="@string/locaton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/location_ic"
+                    android:layout_alignTop="@id/location_ic"
+                    android:layout_marginStart="52dp"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/location_ic"
+                    android:layout_below="@id/const_loc"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="52dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</layout>

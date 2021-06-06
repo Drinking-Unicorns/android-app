@@ -3,11 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/dest_main">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/dest_main"
         android:name="ru.inncreator.devhack.fragments.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_dest_main_to_dest_events"
+            app:destination="@id/dest_events" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_events"
+        android:name="ru.inncreator.devhack.fragments.events.EventsFragment"
+        android:label="EventsFragment"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_dest_events_to_dest_open_event"
+            app:destination="@id/dest_open_event" />
+        <action
+            android:id="@+id/action_dest_events_to_dest_profile"
+            app:destination="@id/dest_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_profile"
+        android:name="ru.inncreator.devhack.fragments.profile.ProfileFragments"
+        android:label="ProfileFragments"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/dest_open_event"
+        android:name="ru.inncreator.devhack.fragments.openevent.OpenEventFragment"
+        android:label="OpenEventFragment"
+        tools:layout="@layout/fragment_openevent"/>
 </navigation>
